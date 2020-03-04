@@ -3,6 +3,19 @@ import scala.io.StdIn._
 object Principal {
   def main(args: Array[String]): Unit = {
 
+    ejercicio1()
+
+    ejercicio3()
+
+    ejercicio5()
+
+    ejercicio7()
+
+    ejercicio9()
+
+  }
+
+  def ejercicio1(): Unit ={
     // ===================================================== EJERCICIO 1 =====================================================
     print("\n\n\t ========== EJERCICIO 1 ========== \n\n")
     //Escriba un programa que permita crear una lista de palabras y que, a continuacion, pida una
@@ -26,13 +39,18 @@ object Principal {
     for ( palabra <- palabras ){
       print(palabra+" ")
     }
+  }
 
+  def ejercicio3(): Unit ={
     // ===================================================== EJERCICIO 3 =====================================================
     print("\n\n\t ========== EJERCICIO 3 ========== \n\n")
     /*
       Escriba un programa que permita crear una lista de palabras y que a continuacion, pida una
        palabra y elimine esa palabra de la lista
      */
+
+    //Estatica
+    var palabras = List("hola","mundo","PC","Laptop","hola","mundo","PC","Laptop","hola","mundo","PC","Laptop");
 
     print("Incerte la palabra a buscar: ")
     var aEliminar = readLine()
@@ -43,7 +61,9 @@ object Principal {
     for ( palabra <- palabrasLimpias ){
       print(palabra+" ")
     }
+  }
 
+  def ejercicio5(): Unit ={
     // ===================================================== EJERCICIO 5 =====================================================
     print("\n\n\t ========== EJERCICIO 5 ========== \n\n")
     /*
@@ -90,7 +110,9 @@ object Principal {
     for (p <- listaUnion){
       print(p+" ")
     }
+  }
 
+  def ejercicio7(): Unit ={
     // ===================================================== EJERCICIO 7 =====================================================
     print("\n\n\t ========== EJERCICIO 7 ========== \n\n")
     /*
@@ -106,7 +128,9 @@ object Principal {
         print(x+" ")
       }
     }
+  }
 
+  def ejercicio9(): Unit ={
     // ===================================================== EJERCICIO 9 =====================================================
     print("\n\n\t ========== EJERCICIO 9 ========== \n\n")
     /*
@@ -139,6 +163,6 @@ object Principal {
       print(factorial+" ")
       factorial = 1
     }
-
   }
+
 }
