@@ -91,6 +91,54 @@ object Principal {
       print(p+" ")
     }
 
+    // ===================================================== EJERCICIO 7 =====================================================
+    print("\n\n\t ========== EJERCICIO 7 ========== \n\n")
+    /*
+      Escribe una funcion llamada "obtenerPalindromas" que busque todas las palabras polindromas de
+      una lista. Ejemplo de palabras inversas radar, oro, rajar, rallar, salas, etc.,
+     */
+
+    var palabrasPolindromas = List("radar", "oro", "rajar", "rallar", "salas", "carro", "pluma", "prueba")
+
+    print("\nPalabras polindromas: \n")
+    for (x <- palabrasPolindromas){
+      if (x.equalsIgnoreCase(x.reverse)){
+        print(x+" ")
+      }
+    }
+
+    // ===================================================== EJERCICIO 9 =====================================================
+    print("\n\n\t ========== EJERCICIO 9 ========== \n\n")
+    /*
+      Dada una lista de numeros enteros, escribir una funcion que:
+        a) Devuelva una lista con todos los que sean primos
+        b) Devuelva la sumatoria y el promedio de los valores
+        c) Devuelva una lista con el factorial de cada uno de esos numeros
+     */
+
+    var listaNumeros = List(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+    var listaPrimos = List()
+    var listaFactorial = List[Int]()
+    var factorial = 1
+    var sumatoria:Int = 0
+
+    for (x <- listaNumeros){
+      sumatoria += x
+      for(num <- 1 to x){
+        factorial = factorial * num
+      }
+
+      factorial = 1
+    }
+
+    print("\nSumatoria: "+sumatoria+" y promedio: "+(sumatoria/listaNumeros.length)+"\nFactoriales: \n")
+    for (x <- listaNumeros){
+      for(num <- 1 to x){
+        factorial = factorial * num
+      }
+      print(factorial+" ")
+      factorial = 1
+    }
 
   }
 }
